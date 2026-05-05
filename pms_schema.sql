@@ -267,9 +267,11 @@ CREATE TABLE IF NOT EXISTS `accounts_ledger` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS `p_late_fee_setting` (
-  `late_fee_id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `fee_frequency` int(11) DEFAULT NULL,
   `fee_amount` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`late_fee_id`)
+  `fee_ratio` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS `p_quick_links` (
@@ -295,6 +297,11 @@ CREATE TABLE IF NOT EXISTS `pass_storer` (
 
 CREATE TABLE IF NOT EXISTS `p_marketing` (
   `marketing_id` int(11) NOT NULL AUTO_INCREMENT,
+  `marketingName` varchar(255) DEFAULT NULL,
+  `postingTitle` varchar(255) DEFAULT NULL,
+  `description` text,
+  `shortDescription` text,
+  `propertyName` varchar(255) DEFAULT NULL,
   `vacantUnit` int(11) DEFAULT NULL,
   `availableDate` date DEFAULT NULL,
   `website` varchar(255) DEFAULT NULL,
@@ -307,4 +314,12 @@ CREATE TABLE IF NOT EXISTS `p_marketing` (
   `uploadBy` varchar(255) DEFAULT NULL,
   `status` int(11) DEFAULT '0',
   PRIMARY KEY (`marketing_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE IF NOT EXISTS `noticeboard` (
+  `notice_id` int(11) NOT NULL AUTO_INCREMENT,
+  `notice_title` longtext NOT NULL,
+  `notice` longtext NOT NULL,
+  `create_timestamp` int(11) NOT NULL,
+  PRIMARY KEY (`notice_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
