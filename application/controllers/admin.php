@@ -309,36 +309,9 @@ class Admin extends CI_Controller
                         $this->db->insert('p_rentformother', $ref);
                     }   
 			
-			//$this->email_model->account_opening_email('doctor', $data['email']); //SEND EMAIL ACCOUNT OPENING EMAIL
 			$this->session->set_flashdata('flash_message', get_phrase('your_application_has_been_received_successfully'));
 			
 			redirect(base_url() . 'index.php?admin/rental_application', 'refresh');
-		}
-		if ($param1 == 'edit' && $param2 == 'do_update') {
-			$data['name']          = $this->input->post('name');
-			$data['email']         = $this->input->post('email');
-			$data['password']      = $this->input->post('password');
-			$data['address']       = $this->input->post('address');
-			$data['phone']         = $this->input->post('phone');
-			$data['unit_id'] = $this->input->post('unit_id');
-			$data['profile']       = $this->input->post('profile');
-			
-			$this->db->where('doctor_id', $param3);
-			$this->db->update('doctor', $data);
-			$this->session->set_flashdata('flash_message', get_phrase('account_updated'));
-			
-			redirect(base_url() . 'index.php?admin/manage_doctor', 'refresh');
-		} else if ($param1 == 'edit') {
-			$page_data['edit_profile'] = $this->db->get_where('doctor', array(
-				'doctor_id' => $param2
-			))->result_array();
-		}
-		if ($param1 == 'delete') {
-			$this->db->where('doctor_id', $param2);
-			$this->db->delete('doctor');
-			$this->session->set_flashdata('flash_message', get_phrase('account_deleted'));
-			
-			redirect(base_url() . 'index.php?admin/manage_doctor', 'refresh');
 		}
 		$page_data['page_name']  = 'rental_application';
 		$page_data['page_title'] = get_phrase('rental_application');

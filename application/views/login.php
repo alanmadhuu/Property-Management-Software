@@ -42,12 +42,6 @@
                                     <select class="validate[required]" name="login_type" style="width:100%;">
                                         <!--<option value=""><?php //echo get_phrase('account_type');?></option>-->
                                       <option value="admin"><?php echo get_phrase('admin');?></option>
-                                        <!--  <option value="doctor"><?php //echo get_phrase('doctor');?></option>
-                                        <option value="patient"><?php //echo get_phrase('patient');?></option>
-                                        <option value="nurse"><?php //echo get_phrase('nurse');?></option>
-                                        <option value="pharmacist"><?php //echo get_phrase('pharmacist');?></option>
-                                        <option value="laboratorist"><?php //echo get_phrase('laboratorist');?></option>
-                                        <option value="accountant"><?php //echo get_phrase('accountant');?></option>-->
                                     </select>
     
                                 </div>
@@ -93,12 +87,6 @@
             	<select class="validate[required]" name="account_type"  style="margin-bottom: 0px !important;">
                     <option value=""><?php echo get_phrase('account_type');?></option>
                     <option value="admin"><?php echo get_phrase('admin');?></option>
-                    <option value="doctor"><?php echo get_phrase('doctor');?></option>
-                    <option value="patient"><?php echo get_phrase('patient');?></option>
-                    <option value="nurse"><?php echo get_phrase('nurse');?></option>
-                    <option value="pharmacist"><?php echo get_phrase('pharmacist');?></option>
-                    <option value="laboratorist"><?php echo get_phrase('laboratorist');?></option>
-                    <option value="accountant"><?php echo get_phrase('accountant');?></option>
                 </select>
                 <input type="email" name="email"  placeholder="<?php echo get_phrase('email');?>"  style="margin-bottom: 0px !important;"/>
                 <input type="submit" value="<?php echo get_phrase('reset');?>"  class="btn btn-blue btn-medium"/>

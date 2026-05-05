@@ -119,8 +119,8 @@
                             </li>
                         </ul>
 		</li>
-                <!------accounts module------>
-		<li class="dark-nav <?php if($page_name == 'cash_book' )echo 'active';?>">
+                <!------accounts module (MISSING FROM CODEBASE)------>
+		<!-- <li class="dark-nav <?php if($page_name == 'cash_book' )echo 'active';?>">
 			<span class="glow"></span>
                         <a class="accordion-toggle  " data-toggle="collapse" href="#accmodule_submenu" >
                             <i class="icon-money icon-2x"></i>
@@ -136,7 +136,7 @@
                             </li>
                            
                         </ul>
-		</li>
+		</li> -->
                  <!------Operations------>
 		<li class="dark-nav <?php if($page_name == 'cashflow_report' || $page_name == 'graphical_report' )echo 'active';?>">
 			<span class="glow"></span>

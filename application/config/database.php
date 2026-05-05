@@ -48,10 +48,10 @@
 $active_group = 'default';
 $active_record = TRUE;
 /**/
-$db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'datastat_admin';
-$db['default']['password'] = '73x*[dI)rEmC';
-$db['default']['database'] = 'datastat_ps';
+$db['default']['hostname'] = 'db';
+$db['default']['username'] = 'root';
+$db['default']['password'] = 'root';
+$db['default']['database'] = 'pms';
 
 
 $db['default']['dbdriver'] = 'mysqli';

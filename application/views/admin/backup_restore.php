@@ -23,22 +23,18 @@
                 <table cellpadding="0" cellspacing="0" border="0" class="table table-normal" >
                     <tbody>
                     	<?php 
-						for($i = 1; $i<= 14; $i++):
+						for($i = 1; $i<= 10; $i++):
 						
-							if($i	==	1)	$type	=	'doctor';
-							else if($i	==	2)$type	=	'patient';
-							else if($i	==	3)$type	=	'nurse';
-							else if($i	==	4)$type	=	'pharmacist';
-							else if($i	==	5)$type	=	'laboratorist';
-							else if($i	==	6)$type	=	'accountant';
-							else if($i	==	7)$type	=	'appointment';
-							else if($i	==	8)$type	=	'payment';
-							else if($i	==	9)$type	=	'blood_bank';
-							else if($i	==	10)$type=	'medicine';
-							else if($i	==	11)$type=	'report';
-							else if($i	==	12)$type=	'noticeboard';
-							else if($i	==	13)$type=	'language';
-							else if($i	==	14)$type=	'all';
+							if($i	==	1)	$type	=	'p_landlord';
+							else if($i	==	2)$type	=	'property';
+							else if($i	==	3)$type	=	'unit';
+							else if($i	==	4)$type	=	'p_appinfo';
+							else if($i	==	5)$type	=	'p_tenant';
+							else if($i	==	6)$type	=	'p_lease';
+							else if($i	==	7)$type	=	'work_order';
+							else if($i	==	8)$type	=	'p_maintenance_log';
+							else if($i	==	9)$type	=	'pass_storer';
+							else if($i	==	10)$type=	'all';
 							?>
 							<tr>
 								<td><?php echo get_phrase($type);?></td>

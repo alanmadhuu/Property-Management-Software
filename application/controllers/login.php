@@ -24,24 +24,6 @@ class Login extends CI_Controller
 		if ($this->session->userdata('admin_login') == 1)
 			redirect(base_url() . 'index.php?admin/dashboard', 'refresh');
 		
-		if ($this->session->userdata('doctor_login') == 1)
-			redirect(base_url() . 'index.php?doctor/dashboard', 'refresh');
-		
-		if ($this->session->userdata('patient_login') == 1)
-			redirect(base_url() . 'index.php?patient/dashboard', 'refresh');
-		
-		if ($this->session->userdata('nurse_login') == 1)
-			redirect(base_url() . 'index.php?nurse/dashboard', 'refresh');
-		
-		if ($this->session->userdata('pharmacist_login') == 1)
-			redirect(base_url() . 'index.php?pharmacist/dashboard', 'refresh');
-		
-		if ($this->session->userdata('laboratorist_login') == 1)
-			redirect(base_url() . 'index.php?laboratorist/dashboard', 'refresh');
-		
-		if ($this->session->userdata('accountant_login') == 1)
-			redirect(base_url() . 'index.php?accountant/dashboard', 'refresh');
-		
 		
 		
 		$config = array(
@@ -73,23 +55,7 @@ class Login extends CI_Controller
 			if ($this->session->userdata('admin_login') == 1)
 				redirect(base_url() . 'index.php?admin/dashboard', 'refresh');
 			
-			if ($this->session->userdata('doctor_login') == 1)
-				redirect(base_url() . 'index.php?doctor/dashboard', 'refresh');
 			
-			if ($this->session->userdata('patient_login') == 1)
-				redirect(base_url() . 'index.php?patient/dashboard', 'refresh');
-			
-			if ($this->session->userdata('nurse_login') == 1)
-				redirect(base_url() . 'index.php?nurse/dashboard', 'refresh');
-			
-			if ($this->session->userdata('pharmacist_login') == 1)
-				redirect(base_url() . 'index.php?pharmacist/dashboard', 'refresh');
-			
-			if ($this->session->userdata('laboratorist_login') == 1)
-				redirect(base_url() . 'index.php?laboratorist/dashboard', 'refresh');
-			
-			if ($this->session->userdata('accountant_login') == 1)
-				redirect(base_url() . 'index.php?accountant/dashboard', 'refresh');
 		}
 		
 	}
@@ -112,36 +78,7 @@ class Login extends CI_Controller
 				$this->session->set_userdata('admin_login', '1');
 				$this->session->set_userdata('admin_id', $row->admin_id);
 			}
-			if ($this->input->post('login_type') == 'doctor') {
-				$this->session->set_userdata('login_type', 'doctor');
-				$this->session->set_userdata('doctor_login', '1');
-				$this->session->set_userdata('doctor_id', $row->doctor_id);
-			}
-			if ($this->input->post('login_type') == 'patient') {
-				$this->session->set_userdata('login_type', 'patient');
-				$this->session->set_userdata('patient_login', '1');
-				$this->session->set_userdata('patient_id', $row->patient_id);
-			}
-			if ($this->input->post('login_type') == 'nurse') {
-				$this->session->set_userdata('login_type', 'nurse');
-				$this->session->set_userdata('nurse_login', '1');
-				$this->session->set_userdata('nurse_id', $row->nurse_id);
-			}
-			if ($this->input->post('login_type') == 'pharmacist') {
-				$this->session->set_userdata('login_type', 'pharmacist');
-				$this->session->set_userdata('pharmacist_login', '1');
-				$this->session->set_userdata('pharmacist_id', $row->pharmacist_id);
-			}
-			if ($this->input->post('login_type') == 'laboratorist') {
-				$this->session->set_userdata('login_type', 'laboratorist');
-				$this->session->set_userdata('laboratorist_login', '1');
-				$this->session->set_userdata('laboratorist_id', $row->laboratorist_id);
-			}
-			if ($this->input->post('login_type') == 'accountant') {
-				$this->session->set_userdata('login_type', 'accountant');
-				$this->session->set_userdata('accountant_login', '1');
-				$this->session->set_userdata('accountant_id', $row->accountant_id);
-			}
+			
 			return TRUE;
 		} else {
 			$this->session->set_flashdata('flash_message', get_phrase('login_failed'));
